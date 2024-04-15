@@ -1,9 +1,15 @@
+<script>
+  export let nav;
+  console.log('nav : ', nav);
+</script>
+
 <nav>
   <h1>Hosting Test</h1>
   <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/blog">Blog</a></li>
+    {#each nav as item}
+      <li><a href={item.path}>{item.name}</a></li>
+    {/each}
+    
   </ul>
 </nav>
 
